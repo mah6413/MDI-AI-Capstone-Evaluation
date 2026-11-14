@@ -1,0 +1,7 @@
+-r requirements.txt
+arize-phoenix
+arize-phoenix-otel
+openinference-instrumentation-openai
+deepeval
+
+pandas>=2.0
