@@ -1,11 +1,19 @@
-MDI AI Capstone: Evaluating Source-Grounded Question Answering in a Generative AI Nonprofit Document Assistant
+### MDI AI Capstone: Evaluating Source-Grounded Question Answering in a Generative AI Nonprofit Document Assistant
+
 University of Rochester | Simon Business School
+
 Master of Science in Business Analytics & Applied AI
+
 Course: GBA 475P — Capstone Project
+
 Organization: Mission Document Intelligence AI, LLC (MDI AI)
+
 Project: AI Nonprofit Document Assistant
+
 Development Environment: Visual Studio Code (VS Code), Python, Streamlit
+
 AI Evaluation Tools: Arize Phoenix, DeepEval
+
 Data Visualization: Tableau
 
 1. Project Overview
@@ -48,6 +56,7 @@ DeepEval	Automated LLM evaluation
 Tableau	Business analytics and results visualization
 GitHub	Version control and technical artifact repository
 
+```
 Technical Architecture
 Nonprofit PDF Documents
           |
@@ -82,7 +91,7 @@ Source-Grounded Answer
              v                 v
        Streamlit           Tableau
        Dashboard           Dashboard
-
+```
 
 Arize Phoenix captures observable model activity and traces. DeepEval evaluates recorded answers using retrieved context. The results are exported for quantitative analysis and visualization.
 4. Evaluation Methodology
@@ -147,6 +156,7 @@ The recorded traces provided information about:
 - Trace and span identifiers.
 Phoenix enabled inspection of the underlying model activity rather than relying solely on the text displayed in Streamlit.
 Phoenix Evaluation Workflow
+```
 Streamlit Application
         |
         v
@@ -163,7 +173,7 @@ JSONL Export
         |
         v
 DeepEval Scoring
-
+```
 
 6. Automated Evaluation: DeepEval
 DeepEval is an open-source framework for evaluating large language model applications.
@@ -286,6 +296,7 @@ The evaluation identifies several opportunities for future technical development
 6. Repeat evaluations: Conduct additional testing across multiple runs to assess performance consistency.
 These are recommendations for future work, not changes demonstrated by the current evaluation.
 12. Recommended Repository Structure
+```
 MDI-AI-Capstone-Evaluation/
 │
 ├── README.md
@@ -322,7 +333,7 @@ MDI-AI-Capstone-Evaluation/
     ├── MDI_AI_Capstone_Presentation.pptx
     └── presentation_recording_link.md
 
-
+```
 This structure is recommended for the final repository. Some artifacts may still need to be added or renamed to match the files actually present in the project.
 13. Capstone Deliverables
 The final capstone includes the following technical and analytical artifacts:
