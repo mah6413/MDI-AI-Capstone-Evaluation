@@ -28,6 +28,7 @@ The broader MDI AI platform is designed to support three interconnected nonprofi
 This capstone focuses specifically on evaluating source-grounded question answering.
 
 The existing Streamlit-based RAG application was developed before the capstone. The primary new technical and analytical contribution is the integration of AI observability and evaluation tools, development of a structured testing methodology, and quantitative analysis of the RAG system's performance.
+
 2. Business Problem Statement
 Nonprofit organizations frequently manage large collections of strategic plans, program evaluations, policies, operational manuals, volunteer records, and advocacy documents.
 
@@ -98,8 +99,6 @@ Arize Phoenix captures observable model activity and traces. DeepEval evaluates 
 4.1 Evaluation Design
 The project uses a single-system evaluation methodology.
 
-The existing hybrid RAG pipeline was evaluated without comparing it against a separate baseline or enhanced retrieval configuration.
-
 The objective was to establish measurable evidence of the application's current performance and identify opportunities for future improvement.
 4.2 Evaluation Dataset
 The evaluation used eight fictional Northbridge Community Alliance nonprofit documents covering strategic planning, program evaluation, food access operations, volunteer management, advocacy, and content integrity.
@@ -116,7 +115,9 @@ Advocacy FAQ	Organizational advocacy positions
 Content Integrity & Citation Standard	Citation requirements and evidence limitations
 
 All eight documents were uploaded to the Streamlit application for question-answering evaluation.
+
 4.3 Test Questions
+
 A structured dataset of 15 nonprofit document questions was developed to assess four categories.
 Category	Questions	Evaluation focus
 Strategic planning and program evaluation	Q1–Q5	Numerical accuracy and cross-document reasoning
@@ -129,7 +130,9 @@ Each test question included an expected answer and an identified source document
 The test questions included single-document retrieval, cross-document synthesis, numerical interpretation, and questions requiring the assistant to acknowledge insufficient evidence.
 
 The exported evaluation records use identifiers Q02–Q16. These identifiers should be reconciled with the original Q1–Q15 test-question numbering before making question-specific claims.
+
 4.4 Evaluation Procedure
+
 The following methodology was used:
 1. Launch the AI Nonprofit Document Assistant locally using Streamlit.
 2. Upload the eight Northbridge nonprofit PDF documents.
@@ -142,6 +145,7 @@ The following methodology was used:
 9. Export evaluation results to CSV.
 10. Analyze and visualize the results using Streamlit and Tableau.
 The evaluation was conducted on recorded responses rather than requiring repeated generation of the same questions during automated scoring.
+
 5. AI Observability: Arize Phoenix
 Arize Phoenix is an open-source AI observability platform used to inspect and monitor LLM application behavior.
 
@@ -203,6 +207,7 @@ Average recorded LLM latency	2.10 seconds
 Highest recorded LLM latency	3.954 seconds
 
 7.1 Faithfulness Findings
+
 The average faithfulness score was 99.26%.
 
 Fourteen of the 15 evaluated responses received a perfect automated faithfulness score.
@@ -212,7 +217,9 @@ One response received approximately 88.89%.
 These results suggest that the application generally generated answers consistent with the retrieved context in this test set.
 
 However, the results should not be interpreted as a 99.26% independently verified factual accuracy rate.
+
 7.2 Answer Relevancy Findings
+
 The average answer relevancy score was 93.86%.
 
 Although most responses achieved high relevancy scores, several questions demonstrated opportunities for improvement.
@@ -231,7 +238,9 @@ Average recorded language model latency was approximately 2.10 seconds.
 The highest recorded latency was approximately 3.954 seconds for Q13.
 
 This metric reflects the recorded language model completion spans. It does not necessarily represent the complete user-facing response time, including document retrieval, preprocessing, and other application operations.
+
 8. Tableau Data Visualization
+   
 Tableau was used to visualize and interpret the evaluation results.
 
 Four worksheets were developed for the capstone analysis.
@@ -255,12 +264,17 @@ Purpose: Explore whether slower responses were associated with higher answer rel
 Because the dataset contains only 15 observations, any apparent relationship should be treated as exploratory.
 
 The four worksheets are consolidated into the MDI AI Hybrid RAG Evaluation Dashboard.
+
 9. Key Findings and Business Insights
+    
 Finding 1: Strong automated source grounding
+
 The high average faithfulness score indicates that the existing hybrid RAG system generally produced answers supported by retrieved document context during this evaluation.
 
 Business implication: Source-grounded question answering may help nonprofit staff retrieve organizational information more consistently than relying on ungrounded generative AI responses.
+
 Finding 2: Faithfulness and relevancy are different performance dimensions
+
 Several answers received high faithfulness scores but lower answer relevancy scores.
 
 This demonstrates that an answer can be supported by source material without fully addressing the user's question.
@@ -274,7 +288,9 @@ Finding 4: Observability improves technical transparency
 Phoenix traces provide a structured record of model execution and enable inspection of individual question-answering interactions.
 
 Business implication: AI observability can support debugging, performance monitoring, and future quality assurance processes.
+
 10. Project Limitations
+    
 This capstone has several limitations.
 
 Small evaluation dataset: The evaluation included only 15 questions and eight representative nonprofit documents. The findings cannot establish performance across all nonprofit document types or real-world organizational environments.
@@ -286,8 +302,11 @@ Automated scoring limitations: DeepEval uses model-based judgments that may vary
 Citation verification: Automated faithfulness scores do not substitute for manual verification of source documents, page references, and factual claims.
 
 Latency measurement: Recorded completion latency does not represent full end-to-end application response time.
+
 11. Recommendations and Future Improvements
+    
 The evaluation identifies several opportunities for future technical development.
+
 1. Expand the evaluation dataset: Test more questions, nonprofit document types, and cross-document retrieval scenarios.
 2. Improve answer relevancy: Investigate lower-scoring responses and consider targeted changes to retrieval, prompting, or response formatting.
 3. Strengthen citation verification: Develop automated or human-reviewed checks that compare generated citations with the supporting source passages.
@@ -295,6 +314,7 @@ The evaluation identifies several opportunities for future technical development
 5. Measure end-to-end latency: Capture the complete workflow from question submission through retrieval and answer generation.
 6. Repeat evaluations: Conduct additional testing across multiple runs to assess performance consistency.
 These are recommendations for future work, not changes demonstrated by the current evaluation.
+
 12. Recommended Repository Structure
 ```
 MDI-AI-Capstone-Evaluation/
@@ -335,7 +355,9 @@ MDI-AI-Capstone-Evaluation/
 
 ```
 This structure is recommended for the final repository. Some artifacts may still need to be added or renamed to match the files actually present in the project.
+
 13. Capstone Deliverables
+    
 The final capstone includes the following technical and analytical artifacts:
 - Working Streamlit AI Nonprofit Document Assistant.
 - Existing hybrid RAG pipeline and relevant Python source code.
@@ -347,7 +369,9 @@ The final capstone includes the following technical and analytical artifacts:
 - Two-page executive summary of business problems, findings, and impact.
 - Recorded PowerPoint presentation.
 - GitHub repository documenting the methodology and technical artifacts.
+  
 14. Business Impact
+    
 This project provides an initial, measurable assessment of the AI Nonprofit Document Assistant's source-grounded question-answering capabilities.
 
 The evaluation demonstrates how open-source AI observability and evaluation tools can be integrated into an existing generative AI application to measure performance and identify potential weaknesses.
@@ -357,7 +381,9 @@ For MDI AI, the findings establish an early technical evaluation framework that 
 For nonprofit organizations, the research illustrates the potential of document-grounded AI systems to improve access to organizational knowledge while emphasizing the importance of reliable evidence, accurate citations, and transparent performance measurement.
 
 The project does not establish verified staff time savings, production readiness, or performance improvements over an alternative RAG configuration. Those outcomes require additional evaluation.
+
 15. Project Ownership and Academic Context
+    
 Mission Document Intelligence AI, LLC (MDI AI) is an independently developed AI startup focused on document intelligence for nonprofit organizations.
 
 The AI Nonprofit Document Assistant prototype existed before the capstone project.
