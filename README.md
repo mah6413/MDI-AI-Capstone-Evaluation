@@ -46,15 +46,25 @@ The evaluation focuses on four questions:
 3. How quickly does the language model generate responses?
 4. What limitations and opportunities for improvement can be identified through AI observability and evaluation?
 3. Technology Stack
+   
 Technology	Role
+
 Python	Primary programming language
+
 Visual Studio Code	Local development and debugging environment
+
 Streamlit	Web application and evaluation dashboard
+
 OpenAI API	Language model inference and embeddings
+
 Hybrid RAG	Document retrieval and source-grounded answer generation
+
 Arize Phoenix	AI observability, tracing, and latency monitoring
+
 DeepEval	Automated LLM evaluation
+
 Tableau	Business analytics and results visualization
+
 GitHub	Version control and technical artifact repository
 
 ```
