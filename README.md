@@ -105,13 +105,21 @@ The evaluation used eight fictional Northbridge Community Alliance nonprofit doc
 
 The test corpus included the following document types:
 Document type	Evaluation purpose
+
 Strategic Plan	Strategic priorities and organizational objectives
+
 Program Evaluation Report	Program outcomes and numerical evidence
+
 Internal Operations FAQ	Pantry policies and procedures
+
 Food Access Policy Brief	Community needs and policy recommendations
+
 Volunteer Onboarding Manual	Volunteer certification and assignment requirements
+
 Volunteer Policy Brief	Volunteer participation barriers and recommendations
+
 Advocacy FAQ	Organizational advocacy positions
+
 Content Integrity & Citation Standard	Citation requirements and evidence limitations
 
 All eight documents were uploaded to the Streamlit application for question-answering evaluation.
@@ -119,10 +127,15 @@ All eight documents were uploaded to the Streamlit application for question-answ
 4.3 Test Questions
 
 A structured dataset of 15 nonprofit document questions was developed to assess four categories.
+
 Category	Questions	Evaluation focus
+
 Strategic planning and program evaluation	Q1–Q5	Numerical accuracy and cross-document reasoning
+
 Food pantry operations and policies	Q6–Q9	Policy retrieval and procedural accuracy
+
 Volunteer management and advocacy	Q10–Q13	Organizational policies and advocacy interpretation
+
 Citation integrity and hallucination resistance	Q14–Q15	Evidence attribution and unsupported claims
 
 Each test question included an expected answer and an identified source document or combination of documents.
@@ -197,6 +210,7 @@ Faithfulness and answer relevancy are automated LLM evaluation metrics.
 They do not independently establish that every factual claim is correct or that every cited document and page number is accurate.
 
 A separate manual source-citation review is necessary to validate citation integrity.
+
 7. Evaluation Results
 The evaluation produced the following results across 15 question-answering records.
 Metric	Result
